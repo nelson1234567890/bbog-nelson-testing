@@ -1,10 +1,10 @@
-name: wf
+name: pipelineNel
 
 on:
   workflow_dispatch:
     inputs:
       lenguaje:
-        description: Lenguaje de programación usado
+        description: 'Lenguaje de programación usado'
         required: true
         type: string
 
