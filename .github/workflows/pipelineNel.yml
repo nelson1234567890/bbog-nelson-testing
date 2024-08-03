@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: mensaje
-        run: echo "Hola mundo, el lenguaje de programación usado es ${{ github.event.inputs.lenguaje }}"
+        run: echo "Hola mundo"
