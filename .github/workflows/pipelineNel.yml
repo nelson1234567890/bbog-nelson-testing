@@ -1,9 +1,10 @@
 name: pipelineNel
 
 on:
-  workflow_dispatch:
+  push:
     branches:
       - feature/pipeline
+  workflow_dispatch:
     inputs:
       lenguaje:
         description: 'Lenguaje de programación usado'
