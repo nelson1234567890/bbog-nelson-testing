@@ -2,7 +2,7 @@ name: pipelineNel
 on:
   push:
     branches:
-      -feature/pipelineNelson
+      - feature/pipelineNelson
   workflow_dispatch:
     inputs:
       nombre:
