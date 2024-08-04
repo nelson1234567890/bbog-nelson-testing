@@ -1,15 +1,11 @@
 name: pipelineNel
 
 on:
-  push:
-    branches:
-      - feature/pipeline
   workflow_dispatch:
     inputs:
       lenguaje:
-        description: Lenguaje de programación usado
+        description: 'Lenguaje de programación'
         required: true
-        type: string
 
 jobs:
   imprimir:
