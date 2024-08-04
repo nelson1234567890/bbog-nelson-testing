@@ -1,5 +1,8 @@
 name: pipelineNel
 on:
+  push:
+    branches:
+      -feature/pipelineNelson
   workflow_dispatch:
     inputs:
       nombre:
