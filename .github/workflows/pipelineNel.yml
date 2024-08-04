@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       lenguaje:
-        description: 'Lenguaje de programación usado'
+        description: 'Lenguaje de programación usado nelson'
         required: true
 
 jobs:
