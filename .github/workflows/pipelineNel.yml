@@ -9,21 +9,9 @@ on:
         description: "Nombre del usuario"
         required: true
         type: string
-      apellido:
-        description: "Apellido del usuario"
-        required: false
-        default: 'NA'
-        type: string
-      genero:
-        description: "Genero del usuario"
-        required: true
-        type: choice
-        options:
-          - masculino
-          - femenino
-  jobs:
-    imprimir:
-      runs-on: ubuntu-latest
-      steps:
-        - name: mensaje
-          run: echo "Hola mundo"
+jobs:
+  imprimir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mensaje
+        run: echo "Hola mundo"
