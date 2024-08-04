@@ -1,15 +1,20 @@
 name: pipelineNel
-
 on:
   workflow_dispatch:
     inputs:
-      lenguaje:
-        description: 'Lenguaje de programación usado nelson'
+      nombre:
+        description: "Nombre del usuario"
         required: true
-
-jobs:
-  imprimir:
-    runs-on: ubuntu-latest
-    steps:
-      - name: mensaje
-        run: echo "Hola mundo, el lenguaje de programación es ${{ github.event.inputs.lenguaje }}"
+        type: string
+      apellido:
+        description: "Apellido del usuario"
+        required: false
+        default: 'NA'
+        type: string
+      genero:
+        description: "Genero del usuario"
+        required: true
+        type: choice
+        options:
+          - masculino
+          - femenino
