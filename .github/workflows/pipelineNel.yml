@@ -18,3 +18,9 @@ on:
         options:
           - masculino
           - femenino
+  jobs:
+    imprimir:
+      runs-on: ubuntu-latest
+      steps:
+        - name: mensaje
+          run: echo "Hola mundo"
