@@ -1,0 +1,16 @@
+name: Test Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      nombre:
+        description: "Nombre del usuario1"
+        required: true
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "El nombre del usuario es ${{ github.event.inputs.nombre }}"
