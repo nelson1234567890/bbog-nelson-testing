@@ -1,0 +1,24 @@
+name: Ejecución manual de workflow
+
+# Este workflow se ejecuta manualmente utilizando el evento workflow_dispatch
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+
+      - name: Compilar el proyecto1
+        run: mvn clean install
+
+      - name: Ejecutar pruebas
+        run: mvn test
