@@ -1,0 +1,16 @@
+name: wf
+
+on:
+  workflow_dispatch:
+    inputs:
+      lenguaje:
+        description: Lenguaje de programación usado
+        required: true
+        type: string
+
+jobs:
+  imprimir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mensaje
+        run: echo "Hola mundo"
