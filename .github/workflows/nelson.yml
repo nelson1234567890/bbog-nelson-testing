@@ -17,7 +17,7 @@ jobs:
         with:
           java-version: '11'
 
-      - name: Compilar el proyecto
+      - name: Compilar el proyecto1
         run: mvn clean install
 
       - name: Ejecutar pruebas
