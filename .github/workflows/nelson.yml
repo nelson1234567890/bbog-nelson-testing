@@ -1,16 +1,24 @@
-name: Test Workflow
+name: Ejecución manual de workflow
 
+# Este workflow se ejecuta manualmente utilizando el evento workflow_dispatch
 on:
   workflow_dispatch:
-    inputs:
-      nombre:
-        description: "Nombre del usuario1"
-        required: true
-        type: string
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print message
-        run: echo "El nombre del usuario es nelson"
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Configurar Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+
+      - name: Compilar el proyecto
+        run: mvn clean install
+
+      - name: Ejecutar pruebas
+        run: mvn test

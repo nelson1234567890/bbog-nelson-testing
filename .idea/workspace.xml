@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9bc06738-88f7-4608-bc37-f544c515df05" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/nelson.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/nelson.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
