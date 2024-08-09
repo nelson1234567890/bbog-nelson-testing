@@ -18,11 +18,9 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: instalarDependencia
+    if: always()
     steps:
-      - name: Extraer nombre del repositorio
-        id: repo_name
-        run: echo "repo_name=${GITHUB_REPOSITORY##*/}" >> $GITHUB_ENV
-
       - name: Verificar nombre del repositorio
-        if: startsWith(env.repo_name, 'bbog') && endsWith(env.repo_name, '-testing')
+        if: startsWith(github.event.repository.name, 'bbog') && endsWith(github.event.repository.name, '-testing')
         run: echo "test"
