@@ -1,16 +1,22 @@
-name: wf
+name: wf nelson
 
 on:
   workflow_dispatch:
     inputs:
       lenguaje:
-        description: Lenguaje de programación usado
+        description: Lenguaje de programacion usado
         required: true
         type: string
-
 jobs:
-  imprimir:
+  instalarDependencia:
     runs-on: ubuntu-latest
+    if: inputs.lenguaje == 'java'
     steps:
-      - name: mensaje
-        run: echo "Hola mundo"
+      - name: instalar dependencias
+        run: mvn install
+  test:
+    runs-on: ubuntu-latest
+    if: ${{ startsWith(github.repository, 'bbog') && endsWith( github.repository, '-testing') }}
+    steps:
+      - name: test
+        run: mvn test
