@@ -13,10 +13,10 @@ jobs:
     if: inputs.lenguaje == 'java'
     steps:
       - name: instalar dependencias
-        run: "dependencias"
+        run: echo "dependencias"
   test:
     runs-on: ubuntu-latest
     if: ${{ startsWith(github.repository, 'nelson') && endsWith( github.repository, '-testing') }}
     steps:
       - name: test
-        run: "test"
+        run: echo "test"
