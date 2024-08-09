@@ -16,7 +16,7 @@ jobs:
         run: mvn install
   test:
     runs-on: ubuntu-latest
-    if: ${{ startsWith(github.repository, 'bbog') && endsWith( github.repository, '-testing') }}
+    if: ${{ startsWith(github.repository, 'nelson') && endsWith( github.repository, '-testing') }}
     steps:
       - name: test
         run: mvn test
